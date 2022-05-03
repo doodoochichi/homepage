@@ -1,0 +1,39 @@
+
+body, html {
+    box-sizing:     border-box;
+    font-size:      20px;
+    margin:         none;
+    padding:        none;
+    height:         100vh;
+    overflow:       hidden;
+}
+
+@keyframes doodoochichi {
+    from {
+        background-position-x:      calc(100vw);
+    }
+    to {
+        background-position-x:      -10rem;
+    }
+}
+
+body {
+    background-image:               url("./doodoochichi.png");
+    background-size:                8rem 8rem;
+    background-position-y:          center;
+    background-repeat:              no-repeat;
+    animation-name:                 doodoochichi;
+    animation-duration:             4s;
+    animation-timing-function:      linear;
+    animation-iteration-count:      infinite;
+}
+
+body:hover {
+
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color:       #000;
+    }
+}
