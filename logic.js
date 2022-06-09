@@ -1,11 +1,12 @@
 
-let wagon, locomotive
+let wagonImage
+let locomotiveImage
 let locomotiveXOffset = 0
 
 // ─── setup ──────────────────────────────────────────────────────────────────────
 
 function preload() {
-    locomotive = loadImage('assets/locomotive.png')
+    locomotiveImage = loadImage('assets/locomotive.png')
 }
 
 function setup() {
@@ -35,7 +36,11 @@ function drawLocomotive() {
     const size = 400
     const speed = 3
 
-    image(locomotive, x, y, size, size)
+    image(locomotiveImage, x, y, size, size)
 
     locomotiveXOffset += speed
+    if (locomotiveXOffset >= width + size) {
+        locomotiveXOffset = 0
+    }
 }
+
