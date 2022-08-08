@@ -2,6 +2,8 @@
 let wagonImage
 let locomotiveImage
 let locomotiveXOffset = 0
+const y = height / 2 - 240
+const size = 400
 
 // ─── setup ──────────────────────────────────────────────────────────────────────
 
@@ -42,5 +44,11 @@ function drawLocomotive() {
     if (locomotiveXOffset >= width + size) {
         locomotiveXOffset = 0
     }
+}
+
+
+function drawRailroad() {
+    stroke(200, 50, 10)
+    line(width, y - size, 0, y - size)
 }
 
