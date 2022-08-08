@@ -25,14 +25,14 @@ function draw() {
 // ─── background ─────────────────────────────────────────────────────────────────
 
 function drawBackground() {
-    background(97, 55, 176)
+    background(68, 8, 196)
 }
 
 // ─── draw locomotive ────────────────────────────────────────────────────────────
 
 function drawLocomotive() {
     const x = width - locomotiveXOffset
-    const y = height / 2 - 140
+    const y = height / 2 - 240
     const size = 400
     const speed = 3
 
