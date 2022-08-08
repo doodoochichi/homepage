@@ -22,6 +22,7 @@ function windowResized() {
 function draw() {
     drawBackground()
     drawLocomotive()
+    drawRailroad()
 }
 
 // ─── background ─────────────────────────────────────────────────────────────────
