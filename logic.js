@@ -49,9 +49,20 @@ function drawLocomotive() {
 
 
 function drawRailroad() {
-    stroke(200, 50, 10)
+
+    var x1 = 15
+    var x2 = 0
+    for (let i = 0; i < 25; i++) {
+        strokeWeight(13)
+        stroke(111, 54, 22)
+        line(x1, height / 2 + 95, x2, height / 2 + 130)
+        x1 += 40
+        x2 += 40
+    }
+    stroke(77, 76, 76)
     strokeWeight(10)
-    line2(0, height / 2 + 130, width, height / 2 + 130)
+    line(0, height / 2 + 100, width, height / 2 + 100)
+    line(0, height / 2 + 125, width, height / 2 + 125)
 }
 
 
