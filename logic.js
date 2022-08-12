@@ -28,7 +28,7 @@ function draw() {
 // ─── background ─────────────────────────────────────────────────────────────────
 
 function drawBackground() {
-    background(68, 8, 196)
+    background(255, 255, 255)
 }
 
 // ─── draw locomotive ────────────────────────────────────────────────────────────
@@ -65,4 +65,4 @@ function drawRailroad() {
     line(0, height / 2 + 125, width, height / 2 + 125)
 }
 
-
+function drawTrainSmoke()
