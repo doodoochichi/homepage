@@ -19,8 +19,8 @@ function windowResized() {
 }
 
 function draw() {
-    drawRailroad()
     drawBackground()
+    drawRailroad()
     drawLocomotive()
 
 }
@@ -50,8 +50,8 @@ function drawLocomotive() {
 
 function drawRailroad() {
     stroke(200, 50, 10)
-    strokeWeight(50)
-    line(0, height / 2, width, height / 2)
+    strokeWeight(10)
+    line2(0, height / 2 + 130, width, height / 2 + 130)
 }
 
 
