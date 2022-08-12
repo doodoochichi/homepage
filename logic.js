@@ -3,11 +3,16 @@ let wagonImage
 let locomotiveImage
 let locomotiveXOffset = 0
 const size = 400
+let doodheadImage
+let doodtailImage
+
 
 // ─── setup ──────────────────────────────────────────────────────────────────────
 
 function preload() {
     locomotiveImage = loadImage('assets/locomotive.png')
+    doodheadImage = loadImage('assets/dood-head.png')
+    doodtailImage = loadImage('assets/dood-tail.png')
 }
 
 function setup() {
@@ -28,7 +33,7 @@ function draw() {
 // ─── background ─────────────────────────────────────────────────────────────────
 
 function drawBackground() {
-    background(255, 255, 255)
+    background(0, 0, 255)
 }
 
 // ─── draw locomotive ────────────────────────────────────────────────────────────
@@ -40,6 +45,9 @@ function drawLocomotive() {
     const speed = 3
 
     image(locomotiveImage, x, y, size, size)
+    image(doodheadImage, x, y, size, size)
+    image(doodtailImage, x + 120, y, size + 120, size)
+    image(doodtailImage, x + 260, y, size + 260, size)
 
     locomotiveXOffset += speed
     if (locomotiveXOffset >= width + size) {
@@ -64,5 +72,3 @@ function drawRailroad() {
     line(0, height / 2 + 100, width, height / 2 + 100)
     line(0, height / 2 + 125, width, height / 2 + 125)
 }
-
-function drawTrainSmoke()
