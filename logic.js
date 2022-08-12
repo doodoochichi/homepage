@@ -33,7 +33,7 @@ function draw() {
 // ─── background ─────────────────────────────────────────────────────────────────
 
 function drawBackground() {
-    background(0, 0, 255)
+    background(255, 170, 255)
 }
 
 // ─── draw locomotive ────────────────────────────────────────────────────────────
@@ -54,7 +54,6 @@ function drawLocomotive() {
         locomotiveXOffset = 0
     }
 }
-
 
 function drawRailroad() {
 
