@@ -7,7 +7,6 @@ let locomotiveXOffset = 0
 let doodHeadImage
 let doodTailImage
 
-
 // ─── setup ──────────────────────────────────────────────────────────────────────
 
 function preload() {
@@ -28,7 +27,6 @@ function draw() {
     drawBackground()
     drawRailroad()
     drawLocomotive()
-
 }
 
 // ─── background ─────────────────────────────────────────────────────────────────
@@ -59,7 +57,7 @@ function drawLocomotive() {
 function drawRailroad() {
     var x1 = 15
     var x2 = 0
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 100; i++) {
         strokeWeight(13)
         stroke(111, 54, 22)
         line(x1, height / 2 + 95, x2, height / 2 + 130)
