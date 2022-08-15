@@ -45,12 +45,17 @@ function drawLocomotive() {
 
     image(locomotiveImage, x, y, size, size)
     image(doodHeadImage, x, y, size, size)
-    image(doodTailImage, x + 60, y, size, size)
-    image(doodTailImage, x + 120, y, size, size)
-    image(doodTailImage, x + 240, y, size, size)
 
-    const howManyDoods = Math.floor((width - x) / size) * 3
-    for (let i = 1; i <= howManyDoods; i++) {
+    // moving with the train
+    const howManyDoodsMovingWithTheTrain = Math.ceil((width - x) / size) * 3
+    for (let i = 0; i < howManyDoodsMovingWithTheTrain - 1; i++) {
+        const doodX = x + (i * size / 3);
+        image(doodTailImage, doodX, y, size, size)
+    }
+
+    // staying after the train
+    const howManyDoodsStayingAfterTheTrain = Math.floor((width - x) / size) * 3
+    for (let i = 1; i <= howManyDoodsStayingAfterTheTrain; i++) {
         const doodX = width - (i * 0.3 * size)
         image(doodTailImage, doodX, y, size, size)
     }
