@@ -45,13 +45,14 @@ function drawLocomotive() {
 
     image(locomotiveImage, x, y, size, size)
     image(doodHeadImage, x, y, size, size)
-    image(doodHeadImage, x + 120, y, size, size)
-    image(doodHeadImage, x + 240, y, size, size)
+    image(doodTailImage, x + 60, y, size, size)
+    image(doodTailImage, x + 120, y, size, size)
+    image(doodTailImage, x + 240, y, size, size)
 
-    const howManyDoods = Math.floor((width - x) / size) * 2
+    const howManyDoods = Math.floor((width - x) / size) * 3
     for (let i = 1; i <= howManyDoods; i++) {
-        const doodX = width - (i * 0.5 * size)
-        image(doodHeadImage, doodX, y, size, size)
+        const doodX = width - (i * 0.3 * size)
+        image(doodTailImage, doodX, y, size, size)
     }
 
     locomotiveXOffset += speed
